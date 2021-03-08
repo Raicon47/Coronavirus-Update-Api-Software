@@ -37,12 +37,17 @@ curl_close($curl);
 </head>
 <body>
 
+<nav class="navbar navbar-light bg-primary shadow fixed-top">
 <div class="container">
-<h1 class="my-5 font-weight-bold text-warning text-center">World Coronavirus Data</h1>
+<a href="index.php" class="navbar-brand font-weight-bold text-light">World Coronavirus Datastat</a>
+</div>
+</nav>
 
-<hr class="bg-light">
+<div class="container">
 
-<div class="alert alert-warning shadow" role="alert">
+<hr class="bg-light mt-5">
+
+<div class="alert alert-warning shadow mt-5" role="alert">
 <small><strong class="text-primary">TOTAL DEATHS: </strong><?php echo $world['total_deaths'] ?></small>
 <small><strong class="text-primary">TOTAL RECOVERY: </strong><?php echo $world['total_recovered'] ?></small>
 <small><strong class="text-primary">ACTIVE CASES: </strong><?php echo $world['active_cases'] ?></small>
@@ -50,7 +55,6 @@ curl_close($curl);
 <small class="mx-3">&copyCopyright Nwaerema Cyprian Jacob | Software Developer | 2021</small>
 </div>
   
-
 
 <div class="row mt-5">
 <?php foreach($stats as $news) : ?>
